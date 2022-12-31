@@ -16,6 +16,7 @@ app.use('/api/users',require('./routes/userRoutes'));
 app.use(errorHandler)
 // How to we start listening to the server
 app.listen(port,()=>{
+    console.log("hello")
     console.log(`server started on ${port}`);
 });
 

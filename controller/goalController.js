@@ -6,9 +6,6 @@ const getGoals=asyncHandler(async (req,res) =>{
     const goals=await Goal.find({user:req.user.id})
     res.json({message:"get goals",data:goals});
 })
-const sampledata=asyncHandler(async(req,res)=>{
-    res.json({message:"sample dara api call"})
-})
 
 const setGoal=asyncHandler(async(req,res) =>{
     if(!req.body.text){
@@ -79,11 +76,9 @@ const deleteGoal=asyncHandler(async(req,res) =>{
 })
 
 
-
 module.exports={
     getGoals,
     setGoal,
     updateGoal,
-    deleteGoal,
-    sampledata
+    deleteGoal
 }
